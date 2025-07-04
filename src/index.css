@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 251 248 233; /* divine cream */
+    --foreground: 139 21 56; /* divine burgundy */
+    --primary: 139 21 56; /* divine burgundy */
+    --primary-foreground: 255 254 247; /* divine ivory */
+    --secondary: 232 180 160; /* divine rose-gold */
+    --secondary-foreground: 139 21 56; /* divine burgundy */
+    --accent: 212 175 55; /* divine gold */
+    --accent-foreground: 139 21 56; /* divine burgundy */
+    --muted: 245 241 232; /* divine cream */
+    --muted-foreground: 139 69 19; /* divine warm-brown */
+    --destructive: 220 38 127;
+    --destructive-foreground: 255 254 247;
+    --border: 232 180 160; /* divine rose-gold */
+    --input: 245 241 232; /* divine cream */
+    --ring: 139 21 56; /* divine burgundy */
+    --card: 255 254 247; /* divine ivory */
+    --card-foreground: 139 21 56; /* divine burgundy */
+    --popover: 255 254 247; /* divine ivory */
+    --popover-foreground: 139 21 56; /* divine burgundy */
+    --sidebar-background: 255 254 247; /* divine ivory */
+    --sidebar-foreground: 139 21 56; /* divine burgundy */
+    --sidebar-primary: 139 21 56; /* divine burgundy */
+    --sidebar-primary-foreground: 255 254 247; /* divine ivory */
+    --sidebar-accent: 245 241 232; /* divine cream */
+    --sidebar-accent-foreground: 139 21 56; /* divine burgundy */
+    --sidebar-border: 232 180 160; /* divine rose-gold */
+    --sidebar-ring: 139 21 56; /* divine burgundy */
+  }
+
+  .dark {
+    --background: 74 21 75; /* divine deep-purple */
+    --foreground: 247 215 218; /* divine soft-pink */
+    --primary: 212 175 55; /* divine gold */
+    --primary-foreground: 74 21 75; /* divine deep-purple */
+    --secondary: 107 70 193; /* divine mystic-purple */
+    --secondary-foreground: 247 215 218; /* divine soft-pink */
+    --accent: 232 180 160; /* divine rose-gold */
+    --accent-foreground: 74 21 75; /* divine deep-purple */
+    --muted: 107 70 193; /* divine mystic-purple */
+    --muted-foreground: 247 215 218; /* divine soft-pink */
+    --destructive: 220 38 127;
+    --destructive-foreground: 247 215 218;
+    --border: 107 70 193; /* divine mystic-purple */
+    --input: 74 21 75; /* divine deep-purple */
+    --ring: 212 175 55; /* divine gold */
+    --card: 74 21 75; /* divine deep-purple */
+    --card-foreground: 247 215 218; /* divine soft-pink */
+    --popover: 74 21 75; /* divine deep-purple */
+    --popover-foreground: 247 215 218; /* divine soft-pink */
+    --sidebar-background: 74 21 75; /* divine deep-purple */
+    --sidebar-foreground: 247 215 218; /* divine soft-pink */
+    --sidebar-primary: 212 175 55; /* divine gold */
+    --sidebar-primary-foreground: 74 21 75; /* divine deep-purple */
+    --sidebar-accent: 107 70 193; /* divine mystic-purple */
+    --sidebar-accent-foreground: 247 215 218; /* divine soft-pink */
+    --sidebar-border: 107 70 193; /* divine mystic-purple */
+    --sidebar-ring: 212 175 55; /* divine gold */
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .divine-glow {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+
+  .divine-text-gradient {
+    background: linear-gradient(135deg, #8B1538 0%, #D4AF37 50%, #E8B4A0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .sacred-border {
+    border-image: linear-gradient(45deg, #8B1538, #D4AF37, #E8B4A0) 1;
+  }
+
+  .portal-entrance {
+    background: radial-gradient(circle at center, rgba(139, 21, 56, 0.1) 0%, rgba(212, 175, 55, 0.1) 50%, rgba(232, 180, 160, 0.1) 100%);
+  }
+}
+
+img {
+  object-position: top;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #8B1538, #D4AF37);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #D4AF37, #E8B4A0);
+}
